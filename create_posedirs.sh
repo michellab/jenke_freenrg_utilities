@@ -1,5 +1,7 @@
 #!/bin/bash
-# this script assumes flare smol.sdf output
+# This script assumes flare smol.sdf output
+# Place in $BASEDIR/fesetup/poses/
+# Automatically converts, renames and folderises compound set
 
 for file in *.sdf; do
 
@@ -15,6 +17,7 @@ done
 rm *.sdf
 rm stdout.err		# comment to view obabel stdout
 
+#### reminder for subsequent cmds:
 # for file in poses/*/; do python setmeup.py $(basename $file); done		#run in fesetup/
 # ignore setup-*.in; just run fesetup morph.in (with indicated morph pairs)
 
